@@ -1,33 +1,18 @@
-// exercise for polymorphism
+//  ES6 Class exercise
 
-function HtmlElement() {
-    this.click = function() {
-        console.log('clicked');
+class Stack {
+    constructor(arr) {
+        this.arr = []; 
     }
-}
-    // in prototype:
-HtmlElement.prototype.focus = function(){
-        console.log('focused');
-}
 
-function HtmlSelectElement(items = []) {
-    this.items = items;
-    this.addItem = function(item) {
-        this.item.push(item);
-    },
-    this.removeItem = function(item) {
-        this.items.splice(this.items.indexOf(item), 1)
+    push(input) {
+        arr.push(input);
     }
-}
-
-HtmlSelectElement.prototype = Object.create(HtmlElement.prototype);
-HtmlSelectElement.prototype.constructor = HtmlSelectElement;
-
-function HtmlImageElement(src) {
-    this.src = src;
-
-    this.render = function(){
-        return `<img src="${this.src}" />`;
+    pop(input) {
+        arr.pop(input);
+    }    
+    peek() {
+        console.log(arr[index.max]);
     }
-}
 
+}
